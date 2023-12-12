@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <title>RCC.com</title>
+</head>
+
+<body>
+    <header id="top">
+        <div class="big-box big-box-ver2">
+            <div class="navi-bar">
+                <div class="logo">
+                    <a href="./index.html"><img src="./Images/Logo.png" alt="RCC Company Logo"></a>
+                </div>
+                <a href="#content" class="content">Skip to Content</a>
+                <nav>
+                    <ul id="MenuItems">
+                        <li>
+                            <a href="./index.html" class="current" accesskey="1">Home<small> [1]</small></a></li>
+                        <li>
+                            <a href="./HTML/camp_equipment/camp_equipment.html" accesskey="2">Camping Equipment<small> [2]</small></a></li>
+                        <li>
+                            <a href="./HTML/furniture/furniture.html" accesskey="3">Furniture<small> [3]</small></a></li>
+                        <li>
+                            <a href="./HTML/review/review.html" accesskey="4">Review<small> [4]</small></a></li>
+                        <li>
+                            <a href="./HTML/offer/offer.html" accesskey="5">Offer & Packages<small> [5]</small></a></li>
+                    </ul>
+                </nav>
+                <div class="right-box">
+                    <div class="animated-search">
+                        <div id="searchBox">
+                            <img src="./Images/search.png" alt="Search Icon" id="searchIcon">
+                            <input type="text" placeholder="Search......">
+                        </div>
+                    </div>
+                    <div class="shop-cart">
+                        <a href="./HTML/cart/cart.html"><img src="./Images/shopcart.png" alt="Shop Cart button"></a>
+                    </div>
+                    <div class="hamburger-menu">
+                        <img src="./Images/menu.png" alt="Menu button" class="menu" onclick="menutoggle()">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <section class="popup-box">
+
+            <div class="popup" id="popup">
+                <img src="./Images/request.png" alt="Request Icon">
+                <h2>Scheduled Maintenance!</h2>
+                <div class="text">Sorry we're down for maintenence.</div>
+                <div class="text">During this time, cutomers may not be able to make payment & orders online.<br>We apologize for any inconvenience caused.<br>We will be back with you shortly.</div>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+
+
+        </section>
+        <section class="slideshow">
+            <h2>Slide Show</h2>
+            <div class="slideshow-box">
+
+                <div class="swiper">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide"><img src="./Images/Promotions/3.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/Promotions/25.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/Promotions/21.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/Promotions/12.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/Promotions/17.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/Promotions/16.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/Promotions/8.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/Promotions/26.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/Promotions/27.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="slogan">
+        <h1 id="content">Slogan</h1>
+        <div class="big-box">
+            <div class="row">
+                <div class="colunm2">
+                    <h1>Camp Your Way To Perfection!</h1>
+                    <p>Life is better with camping gears.<br>We provide you camping solutions<br>at an affordable price.</p>
+                    <a href="" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="colunm2">
+                    <img src="./Images/blog_campping.png" alt="Camping Photo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sales">
+        <div class="small-box">
+            <div class="row row-ver2">
+                <h2 class="title">Sales Items</h2>
+            </div>
+        </div>
+        <div class="small-box">
+            <div class="row row-ver2">
+                <div class="column4">
+                    <a href="#"><img src="./Images/2.Furniture/Power_Supply/PS_3/1.jpg" alt="ALLPOWERS Portable Power Station"></a>
+
+                    <h4>ALLPOWERS Portable Power Station 300W</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p><s>$120.00</s> &#8594; $103.99</p>
+                </div>
+                <div class="column4">
+                    <a href="#"><img src="./Images/2.Furniture/Tent/T_3/1.jpg" alt="Coleman Sundome Camping Tent"></a>
+
+                    <h4>Coleman Sundome Camping Tent</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p><s>$78.55</s> &#8594; $69.77</p>
+                </div>
+                <div class="column4">
+                    <a href="#"><img src="./Images/1.Equipment/Watch/W_3/1.jpg" alt="Garmin Forerunner 55, GPS Running Watch"></a>
+
+                    <h4>Garmin Forerunner 55, GPS Running Watch</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p><s>$180.00</s> &#8594; $169.99</p>
+                </div>
+                <div class="column4">
+                    <a href="#"><img src="./Images/1.Equipment/Footware/F_3/1.jpg" alt="XPETI Women's Quest Leather Waterproff Hiking Boots"></a>
+
+                    <h4>XPETI Women's Quest Leather Waterproff Hiking Boots</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p><s>$60.00</s> &#8594; $53.99</p>
+                </div>
+            </div>
+            <div class="row row-ver2">
+                <div class="column4">
+                    <a href="#"><img src="./Images/1.Equipment/Cooker/1.jpg" alt="Fire Maple Camping Cooker"></a>
+
+                    <h4>Fire Maple Camping Cooker</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p><s>$90.00</s> &#8594; $83.89</p>
+                </div>
+                <div class="column4">
+                    <a href="#"><img src="./Images/2.Furniture/Propane_Stove/PS_1/1.jpg" alt="Gas One Butane Stove"></a>
+
+                    <h4>Coleman Sundome Camping Tent</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p><s>$30.13</s> &#8594; $27.69</p>
+                </div>
+                <div class="column4">
+                    <a href="#"><img src="./Images/2.Furniture/Chair/C_1/1.jpg" alt="Coleman Camping Chair"></a>
+
+                    <h4>Garmin Forerunner 55, GPS Running Watch</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p><s>$36.99</s> &#8594; $30.79</p>
+                </div>
+                <div class="column4">
+                    <a href="#"><img src="./Images/2.Furniture/Mattress/M_1/1.jpg" alt="Etekcity Camping Air Mattress"></a>
+
+                    <h4>XPETI Women's Quest Leather Waterproff Hiking Boots</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p><s>$75.99</s> &#8594; $70.29</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cust_review">
+        <div class="cust_review_box">
+            <div class="col2">
+                <iframe width="400" height="300" src="https://www.youtube.com/embed/5luJEbzEebA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="col2_txt">
+                <h3>Garmin Forerunner 55, GPS Running Watch</h3>
+                <div class="watch_txt">START CALLING YOURSELF A RUNNER.</div>
+                <div class="watch_txt">"HONEST REVIEW!"</div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="location">
+        <h2>Our Location</h2>
+        <div class="location_box">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.9718547503485!2d-93.2725676849457!3d44.984882873319535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b33285c6f60bc1%3A0x437f6e90a75280bd!2sWhitney%20Square!5e0!3m2!1sen!2smm!4v1675861202793!5m2!1sen!2smm"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map_text">
+                <h3>Our Place</h3>
+                <div class="txt">
+                    Our Retail Camping Company is located in Whitney Square, North Loop, Minneapolis.
+                </div>
+                <div class="txt-star">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="txt">
+                    Working Hours : 8:00AM - 5:30PM<br>Monday to Saturaday except Sunday
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brand">
+
+        <div class="small-box">
+            <h2 class="title">Our Partners</h2>
+            <div class="row">
+                <div class="column6"><img src="./Images/Companylogo/1.png" alt="Teton Sports Company Logo"></div>
+                <div class="column6"><img src="./Images/Companylogo/2.png" alt="Loowokko Company Logo"></div>
+                <div class="column6"><img src="./Images/Companylogo/3.png" alt="Helly Hansen Company Logo"></div>
+                <div class="column6"><img src="./Images/Companylogo/4.png" alt="Wakeman Company Logo"></div>
+                <div class="column6"><img src="./Images/Companylogo/5.png" alt="Coleman Company Logo"></div>
+                <div class="column6"><img src="./Images/Companylogo/6.png" alt="ZOOBELIEVES Company Logo"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="back-to-top">
+        <h2>In-page navigation</h2>
+        <a href="#top">Back To Top</a>
+    </section>
+
+    <footer>
+        <div class="footer-box">
+            <div class="firstcol">
+                <h3>Contact Us</h3>
+                <p>Whitney Square, North Loop<br>210 N 2nd St #070,<br>Minneapolis, MN 55401</p>
+                <div>(612) 772-9555</div>
+            </div>
+            <div class="secondcol">
+                <img src="./Images/Logo.png" alt="RCC Company Logo">
+                <p>Our Purpose is To Sustainably Make the Pleasure and<br>Benefits of Camping Accessible to the Many.</p>
+            </div>
+            <div class="thirdcol">
+                <h3>Site Map</h3>
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a></li>
+                    <li>
+                        <a href="./HTML/camp_equipment/camp_equipment.html">Camping Equipment</a></li>
+                    <li>
+                        <a href="./HTML/furniture/furniture.html">Furniture</a></li>
+                    <li>
+                        <a href="./HTML/review/review.html">Review</a></li>
+                    <li>
+                        <a href="./HTML/offer/offer.html">Offer & Packages</a></li>
+                </ul>
+            </div>
+            <div class="fourthcol">
+                <h3>Follow us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2023</p>
+    </footer>
+
+    <script>
+        var searchBox = document.getElementById("searchBox");
+        var searchIcon = document.getElementById("searchIcon");
+
+        searchIcon.onclick = function name(params) {
+            searchBox.classList.toggle("active");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        };
+    </script>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function closePopup() {
+            popup.classList.add("close-popup");
+        }
+    </script>
+</body>
+
+</html>

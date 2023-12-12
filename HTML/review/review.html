@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <title>RCC.com</title>
+</head>
+
+<body>
+    <header id="top">
+        <div class="big-box big-box-ver2">
+            <div class="navi-bar">
+                <div class="logo">
+                    <a href="../../index.html"><img src="../../Images/Logo.png" alt="RCC Company logo"></a>
+                </div>
+                <a href="#content" class="content">Skip to Content</a>
+                <nav>
+                    <ul id="MenuItems">
+                        <li>
+                            <a href="../../index.html" accesskey="1">Home<small> [1]</small></a></li>
+                        <li>
+                            <a href="../camp_equipment/camp_equipment.html" accesskey="2">Camping Equipment<small> [2]</small></a></li>
+                        <li>
+                            <a href="../furniture/furniture.html" accesskey="3">Furniture<small> [3]</small></a></li>
+                        <li>
+                            <a href="./review.html" class="current" accesskey="4">Review<small> [4]</small></a></li>
+                        <li>
+                            <a href="../offer/offer.html" accesskey="5">Offer & Packages<small> [5]</small></a></li>
+                    </ul>
+                </nav>
+                <div class="right-box">
+                    <div class="animated-search">
+                        <div id="searchBox">
+                            <img src="../../Images/search.png" alt="" id="searchIcon">
+                            <input type="text" placeholder="Search......">
+                        </div>
+                    </div>
+                    <div class="shop-cart">
+                        <a href="../cart/cart.html"><img src="../../Images/shopcart.png" alt=""></a>
+                    </div>
+                    <div class="hamburger-menu">
+                        <img src="../../Images/menu.png" alt="" class="menu" onclick="menutoggle()">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <section class="review-box">
+        <h1 id="content">Review</h1>
+        <div class="review-form">
+            <h1>Give Your Feedback</h1>
+            <form>
+                <input type="text" placeholder="First Name .....">
+                <input type="text" placeholder="Surname .....">
+                <input type="email" placeholder="Email .....">
+                <textarea cols="15" rows="5" placeholder="Enter your opinions here ..."></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="back-to-top">
+        <h2>In-page navigation</h2>
+        <a href="#top">Back To Top</a>
+    </section>
+
+
+    <footer>
+        <div class="footer-box">
+            <div class="firstcol">
+                <h3>Contact Us</h3>
+                <p>Whitney Square, North Loop<br>210 N 2nd St #070,<br>Minneapolis, MN 55401</p>
+                <div>(612) 772-9555</div>
+            </div>
+            <div class="secondcol">
+                <img src="../../Images/Logo.png" alt="">
+                <p>Our Purpose is To Sustainably Make the Pleasure and<br>Benefits of Camping Accessible to the Many.</p>
+            </div>
+            <div class="thirdcol">
+                <h3>Site Map</h3>
+                <ul>
+                    <li>
+                        <a href="../../index.html">Home</a></li>
+                    <li>
+                        <a href="../camp_equipment/camp_equipment.html">Camping Equipment</a></li>
+                    <li>
+                        <a href="../furniture/furniture.html">Furniture</a></li>
+                    <li>
+                        <a href="./review.html">Review</a></li>
+                    <li>
+                        <a href="../offer/offer.html">Offer & Packages</a></li>
+                </ul>
+            </div>
+            <div class="fourthcol">
+                <h3>Follow us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2023</p>
+    </footer>
+
+    <script>
+        var searchBox = document.getElementById("searchBox");
+        var searchIcon = document.getElementById("searchIcon");
+
+        searchIcon.onclick = function name(params) {
+            searchBox.classList.toggle("active");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        };
+    </script>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function closePopup() {
+            popup.classList.add("close-popup");
+        }
+    </script>
+</body>
+
+</html>

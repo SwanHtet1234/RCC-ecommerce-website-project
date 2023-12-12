@@ -1,0 +1,901 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+p {
+    font-size: 10pt;
+    line-height: 20px;
+}
+
+:root {
+    --special: cadetblue;
+}
+
+header {
+    background: black;
+}
+
+
+/* .current {
+    border: 1px solid cadetblue;
+} */
+
+.content {
+    color: black;
+    position: absolute;
+    z-index: 100;
+    text-decoration: none;
+    top: 80px;
+}
+
+.content:focus {
+    color: white;
+}
+
+.current::after {
+    content: "";
+    width: 60%;
+    background-color: cadetblue;
+    bottom: -14px;
+    height: 4px;
+    left: 20%;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.big-box {
+    max-width: 1920px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.big-box-ver2 {
+    position: relative;
+    height: 100px;
+}
+
+.navi-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img:hover {
+    transform: translate(5px, 5px);
+}
+
+.logo img {
+    max-width: 100px;
+    width: 100%;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    filter: brightness(2);
+}
+
+nav {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 20px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--special);
+}
+
+nav ul li a small {
+    color: cadetblue;
+    font-size: 12px;
+}
+
+.shop-cart {
+    display: flex;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.shop-cart a img {
+    filter: invert(50%);
+}
+
+.shop-cart a img,
+.hamburger-menu img {
+    width: 30px;
+    height: 30px;
+    filter: invert(50%);
+}
+
+.shop-cart a img:hover,
+.hamburger-menu img:hover {
+    filter: invert(63%) sepia(28%) saturate(487%) hue-rotate(133deg) brightness(87%) contrast(88%);
+}
+
+.hamburger-menu {
+    visibility: hidden;
+}
+
+#content {
+    visibility: hidden;
+}
+
+.right-box {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+    padding-top: 30px;
+}
+
+.animated-search {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 30%;
+    padding-right: 30px;
+}
+
+.animated-search div {
+    border-radius: 55px;
+    background: black;
+    display: flex;
+    align-items: center;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15);
+}
+
+.animated-search img {
+    width: 30px;
+    cursor: pointer;
+    filter: invert(50%);
+}
+
+.animated-search img:hover {
+    filter: invert(63%) sepia(28%) saturate(487%) hue-rotate(133deg) brightness(87%) contrast(88%);
+}
+
+.animated-search input {
+    font-size: 15px;
+    color: white;
+    width: 0px;
+    border: 0;
+    background: transparent;
+    outline: none;
+    transition: 1s;
+}
+
+.active input {
+    width: 150px;
+    padding: 12px 20px;
+}
+
+.popup-box {
+    position: relative;
+    top: 258px;
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    transition: 0.4s;
+    visibility: visible;
+    z-index: 2;
+}
+
+.close-popup {
+    top: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50px;
+    background-color: cadetblue;
+}
+
+.popup .offer {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+}
+
+.popup h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup .text {
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    color: black;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: cadetblue;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slideshow-box {
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.slideshow {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    align-items: center;
+    top: 10px;
+    justify-content: center;
+    background: black;
+}
+
+.swiper-wrapper img {
+    border-radius: 20px;
+}
+
+.swiper {
+    width: 100%;
+    height: fit-content;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row-ver2 {
+    justify-content: space-around;
+    /* margin: 100px auto 50px; */
+}
+
+.column2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.colunm2 h1 {
+    font-size: 30px;
+    padding: 20px 0px;
+}
+
+.colunm2 img {
+    max-width: 100%;
+    padding: 20px 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: grey;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: cadetblue;
+}
+
+.brand {
+    margin: 70px 0;
+}
+
+.small-box {
+    max-width: 1400px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.column6 {
+    width: 170px;
+}
+
+.column6 img {
+    width: 100%;
+    cursor: pointer;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.title::after {
+    content: "";
+    background: cadetblue;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer {
+    background: black;
+    color: #8a8a8a;
+    font-size: 16px;
+    padding: 60px 0 20px;
+    justify-content: center;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.firstcol,
+.secondcol,
+.thirdcol,
+.fourthcol {
+    max-width: 250px;
+    min-width: 250px;
+    margin-bottom: 20px;
+    flex-basis: 25%;
+    width: 100%;
+}
+
+.firstcol {
+    text-align: center;
+}
+
+.firstcol h3,
+.secondcol h3,
+.thirdcol h3,
+.fourthcol h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.secondcol img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.secondcol {
+    text-align: center;
+}
+
+footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.thirdcol {
+    text-align: center;
+}
+
+.thirdcol ul,
+.fourthcol ul {
+    list-style-type: none;
+}
+
+.fourthcol {
+    text-align: center;
+}
+
+.thirdcol ul a {
+    text-decoration: none;
+    color: #8a8a8a;
+}
+
+.thirdcol ul a:hover {
+    color: cadetblue;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.camp-equipment select {
+    border: 1px solid cadetblue;
+    padding: 5px;
+}
+
+.camp-equipment select:focus {
+    outline: none;
+}
+
+.column4 {
+    flex-basis: 20%;
+    min-width: 270px;
+    padding: 10px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.column4:hover {
+    transform: translateY(-5px);
+}
+
+.column4 img {
+    height: 250px;
+    min-height: 250px;
+}
+
+.column4 h4 {
+    color: #555;
+    font-weight: normal;
+}
+
+.column4 i {
+    color: cadetblue;
+}
+
+.page-btn {
+    margin: 0 auto 80px;
+}
+
+.page-btn span {
+    display: inline-block;
+    border: 1px solid cadetblue;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.page-btn span:hover {
+    background: cadetblue;
+    color: white;
+}
+
+.cart-page {
+    margin: 80px auto;
+}
+
+.cart-page table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-page table th {
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background: cadetblue;
+    font-weight: normal;
+}
+
+.cart-page table td {
+    padding: 10px 5px;
+}
+
+.cart-page .cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-page .cart-info img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.cart-page .cart-info a {
+    color: cadetblue;
+    font-size: 12px;
+}
+
+.cart-page input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 1165px) {
+    nav ul {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a {
+        color: white;
+    }
+    .current {
+        border: none;
+        color: dodgerblue;
+    }
+    .current::after {
+        width: 0%;
+    }
+    .menu {
+        display: block;
+        cursor: pointer
+    }
+    .hamburger-menu {
+        visibility: visible;
+        padding-right: 30px;
+    }
+    .slideshow-box {
+        padding-top: 165px;
+    }
+    nav ul li a:hover {
+        color: var(--special);
+    }
+    .colunm2 h1,
+    p {
+        text-align: center;
+    }
+    .slogan .colunm2 {
+        text-align: center;
+    }
+    .column4 {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .active input {
+        width: 100px;
+        padding: 12px 20px;
+    }
+    .logo img {
+        max-width: 50px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .active input {
+        width: 70px;
+        padding: 12px 20px;
+    }
+}
+
+.slogan {
+    background: radial-gradient(white, cadetblue);
+    position: static;
+}
+
+.watch-img {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.column3 {
+    text-align: center;
+    padding: 40px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 15px;
+    margin-right: 15px;
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.reviews .column3:hover {
+    transform: translateY(-10px);
+}
+
+.reviews {
+    margin-top: 100px;
+}
+
+.column3 p {
+    font-size: 14px;
+    margin: 12px 0;
+    color: #777;
+}
+
+.column3 img {
+    width: 80px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.column3 i {
+    color: cadetblue;
+}
+
+.column3 h3 {
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+.back-to-top {
+    display: flex;
+    background: grey;
+    align-content: center;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    height: 20px;
+    padding-top: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.back-to-top a:hover {
+    color: black;
+}
+
+.review-box {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    background: radial-gradient(white, grey);
+}
+
+.review-form {
+    width: 30%;
+    min-width: 300px;
+    max-width: 450px;
+    top: 200px;
+    margin: 100px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.review-form h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.review-form button {
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 80%;
+    background: cadetblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.review-form button:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.review-form input,
+.review-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+    border: 2px solid cadetblue;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total table {
+    border-top: 3px solid cadetblue;
+    width: 100%;
+    max-width: 400px;
+}
+
+.total td:last-child {
+    text-align: right;
+}
+
+.total th:last-child {
+    text-align: right;
+}
+
+.cart-info p {
+    text-align: left;
+}
+
+.slideshow h2 {
+    display: none;
+}
+
+.back-to-top h2 {
+    display: none;
+}
+
+.camp-equip {
+    display: none;
+}
+
+.location {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.location h2 {
+    display: none;
+}
+
+.location_box {
+    width: 90%;
+    /* background: rgb(238, 238, 238); */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+
+.map {
+    flex-basis: 40%;
+    margin: 30px;
+}
+
+.map_text {
+    flex-basis: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.map_text h3,
+.txt {
+    margin: 20px auto;
+}
+
+.map_text h3 {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.txt-star {
+    color: cadetblue;
+}
+
+.cust_review {
+    width: 100%;
+    background: radial-gradient(white, cadetblue);
+    margin-top: 50px;
+}
+
+.cust_review_box {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+
+.col2 {
+    flex-basis: 40%;
+    margin: 30px;
+}
+
+.col2_txt {
+    flex-basis: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.col2_txt h3,
+.watch_txt {
+    margin: 20px auto;
+}
+
+.col2_txt h3 {
+    font-size: 27px;
+}
+
+.watch_txt {
+    font-size: 20px;
+    font: bolder;
+}
+
+.fourthcol a {
+    text-decoration: none;
+    color: #b5b5b5;
+}
+
+.fourthcol a:hover {
+    color: cadetblue;
+}
+
+.basket {
+    font-size: 18px;
+    font-weight: bolder;
+}
